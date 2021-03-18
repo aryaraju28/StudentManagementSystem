@@ -13,6 +13,7 @@ namespace StudentManagementSystem
 {
     public partial class StudentMark : Form
     {
+
         String connectionString = "Server=RAED_COMPUTER\\SQLEXPRESS;Database=StudentManagement;Trusted_Connection=True;";
 
 

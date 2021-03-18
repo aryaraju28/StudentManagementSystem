@@ -12,7 +12,7 @@ namespace StudentManagementSystem
         public string Name { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-        public string Theme { get; set; }
+        public string Color { get; set; }
         public int Left { get; set; }
         public int  Top { get; set; }
         public int Malayalam { get; set; }

@@ -13,7 +13,7 @@ namespace StudentManagementSystem
 {
     public partial class LoginPage : Form
     {
-        String connectionString = "Server=RAED_COMPUTER\\SQLEXPRESS;Database=StudentManagement;Trusted_Connection=True;";
+        String connectionString = "Server=RAED_COMPUTER\\SQLEXPRESS;Database=CollegeManagement;Trusted_Connection=True;";
 
         public LoginPage()
         {
@@ -56,10 +56,17 @@ namespace StudentManagementSystem
             User user = new User();
             user.Id = Convert.ToInt32(reader["Id"]);
             user.Name = reader["Name"].ToString();
-            //user.Left= Convert.ToInt32(Convert.ToInt32(reader["Left"]));
-            //user.Top = Convert.ToInt32(Convert.ToInt32(reader["Top"]));
+            
             user.Username = reader["Username"].ToString();
             user.Password = reader["Password"].ToString();
+            user.Malayalam = Convert.ToInt32(reader["Malayalam"]);
+            user.English = Convert.ToInt32(reader["English"]);
+
+            user.Maths = Convert.ToInt32(reader["Maths"]);
+            user.Color = reader["Color"].ToString();
+            user.Left = Convert.ToInt32(Convert.ToInt32(reader["Left_Offset"]));
+            user.Top = Convert.ToInt32(Convert.ToInt32(reader["Top_Offset"]));
+
             return user;
             con.Close();
 

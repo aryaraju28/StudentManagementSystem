@@ -43,6 +43,16 @@ namespace StudentManagementSystem
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.linklblLogin = new System.Windows.Forms.LinkLabel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.txtMaths = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txtEnglish = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtMalayalam = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnClear
@@ -51,7 +61,7 @@ namespace StudentManagementSystem
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(96, 416);
+            this.btnClear.Location = new System.Drawing.Point(415, 344);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(250, 55);
             this.btnClear.TabIndex = 40;
@@ -64,7 +74,7 @@ namespace StudentManagementSystem
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(372, 467);
+            this.label2.Location = new System.Drawing.Point(508, 467);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 16);
             this.label2.TabIndex = 38;
@@ -189,7 +199,7 @@ namespace StudentManagementSystem
             // 
             this.linklblLogin.AutoSize = true;
             this.linklblLogin.LinkColor = System.Drawing.Color.White;
-            this.linklblLogin.Location = new System.Drawing.Point(535, 467);
+            this.linklblLogin.Location = new System.Drawing.Point(684, 467);
             this.linklblLogin.Name = "linklblLogin";
             this.linklblLogin.Size = new System.Drawing.Size(33, 13);
             this.linklblLogin.TabIndex = 45;
@@ -197,12 +207,123 @@ namespace StudentManagementSystem
             this.linklblLogin.Text = "Login";
             this.linklblLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblLogin_LinkClicked);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(412, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 17);
+            this.label3.TabIndex = 69;
+            this.label3.Text = "Mark Details";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(412, 255);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(44, 16);
+            this.label9.TabIndex = 68;
+            this.label9.Text = "Maths";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(412, 178);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 16);
+            this.label8.TabIndex = 67;
+            this.label8.Text = "English";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(412, 85);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(71, 16);
+            this.label7.TabIndex = 66;
+            this.label7.Text = "Malayalam";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Location = new System.Drawing.Point(415, 309);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(250, 1);
+            this.panel6.TabIndex = 65;
+            // 
+            // txtMaths
+            // 
+            this.txtMaths.BackColor = System.Drawing.Color.SteelBlue;
+            this.txtMaths.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMaths.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaths.ForeColor = System.Drawing.Color.White;
+            this.txtMaths.Location = new System.Drawing.Point(415, 288);
+            this.txtMaths.Name = "txtMaths";
+            this.txtMaths.Size = new System.Drawing.Size(250, 15);
+            this.txtMaths.TabIndex = 64;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Location = new System.Drawing.Point(415, 217);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(250, 1);
+            this.panel5.TabIndex = 63;
+            // 
+            // txtEnglish
+            // 
+            this.txtEnglish.BackColor = System.Drawing.Color.SteelBlue;
+            this.txtEnglish.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEnglish.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEnglish.ForeColor = System.Drawing.Color.White;
+            this.txtEnglish.Location = new System.Drawing.Point(415, 196);
+            this.txtEnglish.Name = "txtEnglish";
+            this.txtEnglish.Size = new System.Drawing.Size(250, 15);
+            this.txtEnglish.TabIndex = 62;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(415, 125);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(250, 1);
+            this.panel4.TabIndex = 61;
+            // 
+            // txtMalayalam
+            // 
+            this.txtMalayalam.BackColor = System.Drawing.Color.SteelBlue;
+            this.txtMalayalam.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMalayalam.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMalayalam.ForeColor = System.Drawing.Color.White;
+            this.txtMalayalam.Location = new System.Drawing.Point(415, 104);
+            this.txtMalayalam.Name = "txtMalayalam";
+            this.txtMalayalam.Size = new System.Drawing.Size(250, 15);
+            this.txtMalayalam.TabIndex = 60;
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(624, 561);
+            this.ClientSize = new System.Drawing.Size(764, 545);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.txtMaths);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.txtEnglish);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.txtMalayalam);
             this.Controls.Add(this.linklblLogin);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -241,5 +362,15 @@ namespace StudentManagementSystem
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.LinkLabel linklblLogin;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TextBox txtMaths;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox txtEnglish;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox txtMalayalam;
     }
 }
