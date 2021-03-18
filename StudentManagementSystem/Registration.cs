@@ -29,6 +29,7 @@ namespace StudentManagementSystem
 
         private void btnRegisteration_Click(object sender, EventArgs e)
         {
+           
             SqlConnection con = new SqlConnection(connectionString);
             con.Open();
 

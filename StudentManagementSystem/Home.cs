@@ -57,7 +57,23 @@ namespace StudentManagementSystem
             this.BackColor = Color.FromArgb(Convert.ToInt32(_user.Color));
             this.Left = _user.Left;
             this.Top = _user.Top;
-            this.Text = lblUsername.Text = "Welcome" + _user.Name;
+            lblUsername.Text = "Welcome" + _user.Name;
+            lblMalayalm.Text = _user.Malayalam.ToString();
+            lblEnglish.Text = _user.English.ToString();
+            lblMaths.Text = _user.Maths.ToString();
+            int Total;
+            Total = int.Parse(lblMalayalm.Text) + int.Parse(lblEnglish.Text) + int.Parse(lblMaths.Text);
+            lblTotal.Text = Total.ToString();
+
+
+
+
+
+
+
+
+
+
 
         }
 
@@ -82,9 +98,24 @@ namespace StudentManagementSystem
             con.Close();
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+           
+            LoginPage obj = new LoginPage();
+            obj.Show();
+            this.Hide();
 
+        }
 
-        
+        private void label4_Click(object sender, EventArgs e)
+        {
+            lblMalayalm.Text = _user.Malayalam.ToString();
+            lblEnglish.Text = _user.English.ToString();
+            lblMaths.Text = _user.Maths.ToString();
+            int Total;
+            Total = int.Parse(lblMalayalm.Text) + int.Parse(lblEnglish.Text) + int.Parse(lblMaths.Text);
+            lblTotal.Text = Total.ToString();
+        }
     }
     
 }

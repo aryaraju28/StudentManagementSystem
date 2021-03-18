@@ -18,6 +18,8 @@ namespace StudentManagementSystem
         public LoginPage()
         {
             InitializeComponent();
+            txtPassword.PasswordChar = '*';
+            txtPassword.MaxLength = 10;
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -30,12 +32,21 @@ namespace StudentManagementSystem
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            if (textUsername.Text == "" && txtPassword.Text == "")
+            {
+                MessageBox.Show("please enter username and password");
+                textUsername.Focus();
+            }
+           
             User loggndUser = Login(textUsername.Text, txtPassword.Text);
             if(loggndUser!=null)
             {
                 Home homepage = new Home(loggndUser);
                 homepage.Show();
+                this.Hide();
             }
+
+           
 
         }
 
