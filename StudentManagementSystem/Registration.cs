@@ -51,5 +51,12 @@ namespace StudentManagementSystem
             obj.Show();
             this.Hide();
         }
+
+        private void linklblLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LoginPage login = new LoginPage();
+            login.Show();
+            this.Hide();
+        }
     }
 }

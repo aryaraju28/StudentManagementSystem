@@ -30,7 +30,6 @@ namespace StudentManagementSystem
         private void InitializeComponent()
         {
             this.btnClear = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnRegisteration = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@ namespace StudentManagementSystem
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.linklblLogin = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // btnClear
@@ -58,18 +58,6 @@ namespace StudentManagementSystem
             this.btnClear.Text = "Home";
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label3.Location = new System.Drawing.Point(550, 467);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 16);
-            this.label3.TabIndex = 39;
-            this.label3.Text = "Log in";
             // 
             // label2
             // 
@@ -197,18 +185,30 @@ namespace StudentManagementSystem
             this.label6.TabIndex = 44;
             this.label6.Text = "Password";
             // 
+            // linklblLogin
+            // 
+            this.linklblLogin.AutoSize = true;
+            this.linklblLogin.LinkColor = System.Drawing.Color.White;
+            this.linklblLogin.Location = new System.Drawing.Point(535, 467);
+            this.linklblLogin.Name = "linklblLogin";
+            this.linklblLogin.Size = new System.Drawing.Size(33, 13);
+            this.linklblLogin.TabIndex = 45;
+            this.linklblLogin.TabStop = true;
+            this.linklblLogin.Text = "Login";
+            this.linklblLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblLogin_LinkClicked);
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(624, 561);
+            this.Controls.Add(this.linklblLogin);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnRegisteration);
             this.Controls.Add(this.label1);
@@ -228,7 +228,6 @@ namespace StudentManagementSystem
         #endregion
 
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnRegisteration;
         private System.Windows.Forms.Label label1;
@@ -241,5 +240,6 @@ namespace StudentManagementSystem
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.LinkLabel linklblLogin;
     }
 }

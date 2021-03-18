@@ -29,13 +29,23 @@ namespace StudentManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
+            this.lstMark = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
+            // 
+            // lstMark
+            // 
+            this.lstMark.FormattingEnabled = true;
+            this.lstMark.Location = new System.Drawing.Point(156, 89);
+            this.lstMark.Name = "lstMark";
+            this.lstMark.Size = new System.Drawing.Size(120, 212);
+            this.lstMark.TabIndex = 0;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lstMark);
             this.Name = "Home";
             this.Text = "Home";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Home_FormClosing);
@@ -45,5 +55,7 @@ namespace StudentManagementSystem
         }
 
         #endregion
+
+        private System.Windows.Forms.ListBox lstMark;
     }
 }
