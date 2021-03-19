@@ -83,10 +83,10 @@ namespace StudentManagementSystem
             int maxlength = 4;
             string charAvailable = "0123456789";
             StringBuilder password = new StringBuilder();
-            Random rde = new Random();
-            int passwordLength = rde.Next(minlength, maxlength + 1);//random length for passwordis 8 -12 characters
+            Random random= new Random();
+            int passwordLength = random.Next(minlength, maxlength + 1);//random length for passwordis 8 -12 characters
             while (passwordLength-- > 0)
-            password.Append(charAvailable[rde.Next(charAvailable.Length)]);
+            password.Append(charAvailable[random.Next(charAvailable.Length)]);
             txtPassword.Text = password.ToString();
         }
     }

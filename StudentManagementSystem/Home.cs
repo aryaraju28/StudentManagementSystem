@@ -12,18 +12,23 @@ namespace StudentManagementSystem
 {
     public partial class Home : Form
     {
+        //private int _ticks;
+        //int seconds;
+
+        //int minutes;
+        //int hours;
         User _user;
         String connectionString = "Server=RAED_COMPUTER\\SQLEXPRESS;Database=CollegeManagement;Trusted_Connection=True;";
-        int seconds, minutes, hours;
+        
     
         public Home(User user)
         {
             InitializeComponent();
 
             _user = user;
-
             timer1.Start();
-            seconds = minutes = hours = 0;
+            //seconds = minutes = hours = 0;
+
         }
 
 
@@ -59,17 +64,15 @@ namespace StudentManagementSystem
             this.BackColor = Color.FromArgb(Convert.ToInt32(_user.Color));
             this.Left = _user.Left;
             this.Top = _user.Top;
-            lblUsername.Text = "Welcome"   +  _user.Name;
-            lblMalayalm.Text = _user.Malayalam.ToString();
-            lblEnglish.Text = _user.English.ToString();
-            lblMaths.Text = _user.Maths.ToString();
-            int Total;
-            Total = int.Parse(lblMalayalm.Text) + int.Parse(lblEnglish.Text) + int.Parse(lblMaths.Text);
-            lblTotal.Text = Total.ToString();
+            
 
             txtPassword.Hide();
             btnResetPassword.Hide();
-
+            lblUsername.Text = "Welcome     " + _user.Name;
+            lblMalayalm.Text = "Malayalam     :"+_user.Malayalam.ToString();
+            lblEnglish.Text =  "English            :"+_user.English.ToString();
+            lblMaths.Text =    "Maths              :"+ _user.Maths.ToString();
+            lblTotal.Text = "Total               :" + (_user.Malayalam + _user.English + _user.Maths);
         }
 
         private void lblTheme_Click(object sender, EventArgs e)
@@ -95,31 +98,17 @@ namespace StudentManagementSystem
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            seconds++;
-            if(seconds>59)
-            {
-                minutes++;
-                seconds = 0;
-            }
-            if(minutes>59)
-            {
-                hours++;
-                minutes = 0;
-            }
-            lblHour.Text = hours.ToString();
-            lblMinutes.Text = minutes.ToString();
-            lblSeconds.Text = seconds.ToString();
+            //seconds++;
+           
+            //lblSeconds.Text = seconds.ToString();
+            //lblMinutes.Text = minutes.ToString();
+            //lblHour.Text = hours.ToString();
+
         }
 
         private void Home_MouseLeave(object sender, EventArgs e)
         {
             
-            lblHour.Text = "00";
-            lblMinutes.Text = "00";
-            lblSeconds.Text = "00";
-            hours = 0;
-            minutes = 0;
-            seconds = 0;
 
         }
 
@@ -132,15 +121,7 @@ namespace StudentManagementSystem
         {
             txtPassword.Show();
             btnResetPassword.Show();
-            //SqlConnection con = new SqlConnection(connectionString);
-            //con.Open();
-
-            //SqlCommand command = new SqlCommand("UpdateLoginPassword", con);
-            //command.CommandType = CommandType.StoredProcedure;
-
-            //command.Parameters.AddWithValue("Password", txtPassword.Text);
-            //command.ExecuteNonQuery();
-            //con.Close();
+            
 
            
         }
@@ -164,6 +145,29 @@ namespace StudentManagementSystem
             MessageBox.Show("Password Changed Successfully");
         }
 
+        private void linkMark(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
+        }
+
+        private void linkTheme(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void Home_MouseMove(object sender, MouseEventArgs e)
+        {
+
+
+            //seconds = 0;
+            //minutes=0;
+            //hours = 0;
+
+           
+          
+
+        }
+
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
            
@@ -175,12 +179,7 @@ namespace StudentManagementSystem
 
         private void label4_Click(object sender, EventArgs e)
         {
-            lblMalayalm.Text = _user.Malayalam.ToString();
-            lblEnglish.Text = _user.English.ToString();
-            lblMaths.Text = _user.Maths.ToString();
-            int Total;
-            Total = int.Parse(lblMalayalm.Text) + int.Parse(lblEnglish.Text) + int.Parse(lblMaths.Text);
-            lblTotal.Text = Total.ToString();
+           
         }
     }
     
