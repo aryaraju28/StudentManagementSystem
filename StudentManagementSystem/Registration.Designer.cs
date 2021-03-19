@@ -52,6 +52,7 @@ namespace StudentManagementSystem
             this.txtEnglish = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtMalayalam = new System.Windows.Forms.TextBox();
+            this.linkRandomPass = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label2
@@ -71,7 +72,7 @@ namespace StudentManagementSystem
             this.btnRegisteration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegisteration.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegisteration.ForeColor = System.Drawing.Color.White;
-            this.btnRegisteration.Location = new System.Drawing.Point(233, 406);
+            this.btnRegisteration.Location = new System.Drawing.Point(84, 406);
             this.btnRegisteration.Name = "btnRegisteration";
             this.btnRegisteration.Size = new System.Drawing.Size(250, 55);
             this.btnRegisteration.TabIndex = 37;
@@ -294,12 +295,26 @@ namespace StudentManagementSystem
             this.txtMalayalam.Size = new System.Drawing.Size(250, 15);
             this.txtMalayalam.TabIndex = 60;
             // 
+            // linkRandomPass
+            // 
+            this.linkRandomPass.AutoSize = true;
+            this.linkRandomPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkRandomPass.LinkColor = System.Drawing.Color.White;
+            this.linkRandomPass.Location = new System.Drawing.Point(432, 377);
+            this.linkRandomPass.Name = "linkRandomPass";
+            this.linkRandomPass.Size = new System.Drawing.Size(166, 15);
+            this.linkRandomPass.TabIndex = 70;
+            this.linkRandomPass.TabStop = true;
+            this.linkRandomPass.Text = "Generate Random Password";
+            this.linkRandomPass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkRandomPass_LinkClicked);
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(753, 545);
+            this.ClientSize = new System.Drawing.Size(731, 521);
+            this.Controls.Add(this.linkRandomPass);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -326,6 +341,7 @@ namespace StudentManagementSystem
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Registration";
             this.Text = "Registration";
+            this.Load += new System.EventHandler(this.Registration_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,5 +371,6 @@ namespace StudentManagementSystem
         private System.Windows.Forms.TextBox txtEnglish;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtMalayalam;
+        private System.Windows.Forms.LinkLabel linkRandomPass;
     }
 }

@@ -30,6 +30,9 @@ namespace StudentManagementSystem
         private void btnRegisteration_Click(object sender, EventArgs e)
         {
            
+
+            
+
             SqlConnection con = new SqlConnection(connectionString);
             con.Open();
 
@@ -38,17 +41,17 @@ namespace StudentManagementSystem
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.AddWithValue("Name", txtName.Text);
             command.Parameters.AddWithValue("Username", txtUsername.Text);
-            command.Parameters.AddWithValue("Password", txtPassword.Text);
+            command.Parameters.AddWithValue("Password",txtPassword.Text);
             command.Parameters.AddWithValue("Malayalam", txtMalayalam.Text);
             command.Parameters.AddWithValue("English", txtEnglish.Text);
             command.Parameters.AddWithValue("Maths", txtMaths.Text);
-
-
-
             command.ExecuteNonQuery();
-            con.Close();
-            MessageBox.Show("Account Successfully created");
-            txtName.Text = txtUsername.Text = txtPassword.Text = txtEnglish.Text = txtMalayalam.Text = txtMaths.Text = "";
+            
+            
+            MessageBox.Show("Account Successfully created" + "\n" + "Temporary Password   :" + txtPassword.Text);
+            txtName.Text = txtUsername.Text = txtEnglish.Text = txtMalayalam.Text = txtMaths.Text = "";
+
+
 
         }
 
@@ -64,6 +67,27 @@ namespace StudentManagementSystem
             LoginPage login = new LoginPage();
             login.Show();
             this.Hide();
+        }
+
+        private void linkRandomPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
+
+
+        }
+
+        private void Registration_Load(object sender, EventArgs e)
+        {
+            txtPassword.Visible=false;
+            int minlength = 4;
+            int maxlength = 4;
+            string charAvailable = "0123456789";
+            StringBuilder password = new StringBuilder();
+            Random rde = new Random();
+            int passwordLength = rde.Next(minlength, maxlength + 1);//random length for passwordis 8 -12 characters
+            while (passwordLength-- > 0)
+            password.Append(charAvailable[rde.Next(charAvailable.Length)]);
+            txtPassword.Text = password.ToString();
         }
     }
 }
